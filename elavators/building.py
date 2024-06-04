@@ -19,7 +19,9 @@ class building:
         floor_y = floor.y_position
         min_time, elevator_chosen = ind_min([elevator.time_to_floor(floor_y) for elevator in self.elevators])
         if min_time > 0:  #no elevator available in this floor
-            
+            print("meir")
+
+
             current_time = time.time()
             self.elevators[elevator_chosen].get_call(floor_y)
             floor.time_to_wait = timer( min_time) # instantiate timer with the time of whaiting
